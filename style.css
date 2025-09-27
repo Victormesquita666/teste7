@@ -8,7 +8,6 @@ body {
 /* Header topo com logo + links */
 .topo {
   display: flex;
-  flex-direction: column; /* logo em cima, links embaixo */
   align-items: center; /* centraliza tudo horizontalmente */
   justify-content: center;
   background-color: rgb(253, 240, 7);
@@ -16,9 +15,6 @@ body {
   position: sticky;
   top: 0;
   z-index: 10; 
-  display: flex;           /* Ativa flexbox */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center;
 }
 
 .topo .logo {
@@ -28,21 +24,6 @@ body {
   margin-bottom: 5px; /* espaço entre logo e links */
 }
 
-.topo .footer-links {
-  display: flex;
-  gap: 25px; /* links separados */
-  justify-content: center; /* centraliza links */
-  flex-wrap: wrap; /* garante que no mobile não quebre feio */
-}
-
-.topo .footer-links a {
-  text-decoration: none;
-  color: #000;
-}
-
-.topo .footer-links a:hover {
-  text-decoration: underline;
-}
 /* Carrossel */
 .carrossel {
   position: relative;
@@ -145,3 +126,4 @@ body {
     gap: 10px;
   }
 }
+
