@@ -20,8 +20,9 @@ body {
 .topo .logo {
   width: 80px; /* tamanho mantido */
   height: auto;
-  border-radius: 10px;
-  margin-bottom: 5px; /* espaço entre logo e links */
+  border-radius: 10px; 
+  alin-itenms:center;
+ 
 }
 
 /* Carrossel */
@@ -126,4 +127,5 @@ body {
     gap: 10px;
   }
 }
+
 
