@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONIX PLUS LTZ 1.0 Turbo 2022</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #333;
+    }
+
+    /* Rodapé pequeno amarelo */
+    footer {
+      background-color: #ffcc00;
+      text-align: center;
+      padding: 15px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      position: relative;
+      top: 0%;
+      display: flex;           /* Ativa flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;
+    }
+
+    footer img {
+      max-width: 100px;
+      border-radius: 8px;
+    }
+
+    /* Card central */
+    .card {
+      background-color: #f0f0f0;
+      margin: 15px;
+      margin-bottom: 70px; /* Espaço para o rodapé */
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Carrossel */
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 800px;
+      overflow: hidden;
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 0.4s ease-in-out;
+      width: 100%;
+    }
+
+    .carousel-images img {
+      min-width: 100%;
+      height: 800px;
+      object-fit: cover;
+    }
+
+    .carousel button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 50%;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    /* Conteúdo do card */
+    .content {
+      padding: 12px;
+    }
+
+    .content h2 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #222;
+      margin: 10px 0;
+    }
+
+    .details {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .features p {
+      font-size: 13px;
+      margin: 3px 0;
+    }
+
+    /* Botão de WhatsApp */
+    .whatsapp-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 12px 0;
+      margin: 15px 0;
+      background-color: #25D366;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebe57;
+    }
+  </style>
+</head>
+<body>
+   <footer>
+    <img src="imagens/logo.jpg" alt="Logo">
+  </footer>
+
+
+  <div class="card">
+    <!-- Carrossel -->
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="imagens/onixltrdg1.jpg.jpg" alt="Carro 1">
+        <img src="imagens/onixrdg3.jpg" alt="Carro 2">
+        <img src="imagens/onizrdg4.jpg" alt="Carro 3">
+      </div>
+      <button class="prev">❮</button>
+      <button class="next">❯</button>
+    </div>
+
+    <!-- Informações do carro -->
+    <div class="content">
+      <h2>ONIX PLUS LTZ 1.0 Turbo 2022</h2>
+      <p class="price">R$ 82.900</p>
+      <p class="details">KM: 50.000 | Câmbio: Automático | Motor: 1.0 Turbo flex | GARANTIA DE FÁBRICA 15 ANOS ✅</p>
+
+      <div class="features">
+        <p>✅ Ar Condicionado</p>
+        <p>✅ Direção Elétrica</p>
+        <p>✅ Vidros Elétricos nas 4 portas</p>
+        <p>✅ Travas Elétricas</p>
+        <p>✅ Bancos Elétricos</p>
+        <p>✅ Retrovisores Elétricos</p>
+        <p>✅ Multimídia original de fábrica</p>
+        <p>✅ Faróis de milha</p>
+        <p>✅ Sensor de Ré</p>
+        <p>✅ Freios ABS</p>
+        <p>✅ Piloto Automático</p>
+        <p>✅ Volante Multifuncional</p>
+        <p>✅ Mala Elétrica</p>
+        <p>✅ Bancos em Couro</p>
+        <p>✅ Rodas Aro 17</p>
+      </div>
+
+      <a class="whatsapp-btn" href="https://wa.me/5511999999999" target="_blank">Fazer Simulação</a>
+    </div>
+  </div>
+  <!-- Rodapé -->
+ 
+  <script>
+    const images = document.querySelector('.carousel-images');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const totalImages = document.querySelectorAll('.carousel-images img').length;
+
+    let index = 0;
+
+    function showImage() {
+      images.style.transform = `translateX(${-index * 100}%)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % totalImages;
+      showImage();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + totalImages) % totalImages;
+      showImage();
+    });
+  </script>
+
+</body>
+</html>

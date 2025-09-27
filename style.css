@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+/* Header topo com logo + links */
+.topo {
+  display: flex;
+  flex-direction: column; /* logo em cima, links embaixo */
+  align-items: center; /* centraliza tudo horizontalmente */
+  justify-content: center;
+  background-color: rgb(253, 240, 7);
+  padding: 10px 0; /* mantém a altura original do topo */
+  position: sticky;
+  top: 0;
+  z-index: 10; 
+  display: flex;           /* Ativa flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;
+}
+
+.topo .logo {
+  width: 80px; /* tamanho mantido */
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 5px; /* espaço entre logo e links */
+}
+
+.topo .footer-links {
+  display: flex;
+  gap: 25px; /* links separados */
+  justify-content: center; /* centraliza links */
+  flex-wrap: wrap; /* garante que no mobile não quebre feio */
+}
+
+.topo .footer-links a {
+  text-decoration: none;
+  color: #000;
+}
+
+.topo .footer-links a:hover {
+  text-decoration: underline;
+}
+/* Carrossel */
+.carrossel {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Cards 2 por linha */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* aumentado o espaçamento entre os cards */
+  padding: 0 10px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 320px; /* altura aumentada */
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.card p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e60000;
+  margin: 10px 0;
+}
+
+.btn {
+  margin-top: auto;
+  padding: 8px;
+  background: #0bca04;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #333;
+}
+
+/* Media query menor que 480px */
+@media (max-width: 480px) {
+  .card img {
+    height: 150px;
+  }
+  .btn {
+    padding: 6px;
+    font-size: 14px;
+  }
+  .topo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .topo .footer-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
